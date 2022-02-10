@@ -1,10 +1,13 @@
 @Library('FirstLib@us-0278') _
 
 pipeline {
+
    agent any
+
    environment {
        TEST_VAR = "super"
    }
+   
    stages {
        stage("first") {
            steps {
