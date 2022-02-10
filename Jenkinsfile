@@ -18,6 +18,7 @@ pipeline {
                     bat "echo Hallo from git 2.0, ${TEST_VAR}-${foo2}!"
                 }
                 script {
+                    // failed
                     lib.SimpleHelloFromLib
 
                     // failed
@@ -29,6 +30,8 @@ pipeline {
                 script {
                     def foo3 = "DK3"
                     lib.HalloFromLib "${foo3}"
+                    def foo3 = 'DK4'
+                    lib.HalloFromLib '${foo3}'
                 }
                 script {
                     lib.call 'DKcall'
