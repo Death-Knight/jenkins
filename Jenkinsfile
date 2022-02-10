@@ -21,7 +21,9 @@ pipeline {
                 //     lib.SimpleHelloFromLib
                 // }
                 script {
-                    lib.HalloFromLib "${foo2}"
+                    def foo3 = "DK"
+                    lib.HalloFromLib "${foo3}"
+                    lib.HalloFromLib
                 }
                 script {
                     lib.call 'DK'
