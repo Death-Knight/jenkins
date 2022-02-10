@@ -27,7 +27,7 @@ pipeline {
                 }
                 script {
                     lib.call 'DKcall'
-                    lib.call
+                    lib.call ''
                 }
            }
        }
