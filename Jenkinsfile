@@ -41,7 +41,8 @@ pipeline {
                     // lib.HalloFromLib '${foo3}'
                 }
                 script {
-                    lib.call 'DKcall'
+                    lib.call 'DKcall1'
+                    lib.call "DKcall2"
                     lib.call ''
                 }
            }
