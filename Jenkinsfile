@@ -23,7 +23,7 @@ pipeline {
                 script {
                     def foo3 = "DK"
                     lib.HalloFromLib "${foo3}"
-                    lib.HalloFromLib
+                    lib.HalloFromLib ""
                 }
                 script {
                     lib.call 'DK'
