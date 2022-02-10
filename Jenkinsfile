@@ -21,12 +21,12 @@ pipeline {
                 //     lib.SimpleHelloFromLib
                 // }
                 script {
-                    def foo3 = "DK"
+                    def foo3 = "DK3"
                     lib.HalloFromLib "${foo3}"
                     // lib.HalloFromLib
                 }
                 script {
-                    lib.call 'DK'
+                    lib.call 'DKcall'
                     lib.call
                 }
            }
