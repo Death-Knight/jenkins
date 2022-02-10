@@ -23,7 +23,8 @@ pipeline {
                     // failed
                     // lib.SimpleHelloFromLib ''
 
-                    lib.SimpleHelloFromLib ""
+                    // failed
+                    // lib.SimpleHelloFromLib ""
                 }
                 script {
                     def foo3 = "DK3"
