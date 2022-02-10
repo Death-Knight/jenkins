@@ -31,8 +31,8 @@ pipeline {
                     def foo3 = "DK3"
                     lib.HalloFromLib "${foo3}"
                     
-                    def foo3 = 'DK4'
-                    bat "echo Test foo3: ${foo3}"
+                    // failed
+                    // def foo3 = 'DK4'
                     // failed
                     // lib.HalloFromLib '${foo3}'
                 }
