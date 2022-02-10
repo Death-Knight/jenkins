@@ -17,9 +17,9 @@ pipeline {
                     // bat "echo Hallo 2.0, ${TEST_VAR}-${foo}-${foo2}!" // fail
                     bat "echo Hallo from git 2.0, ${TEST_VAR}-${foo2}!"
                 }
-                script {
-                    lib.SimpleHelloFromLib ""
-                }
+                // script {
+                //     lib.SimpleHelloFromLib
+                // }
                 script {
                     lib.HalloFromLib "${foo2}"
                 }
