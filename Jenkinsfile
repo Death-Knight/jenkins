@@ -30,8 +30,11 @@ pipeline {
                 script {
                     def foo3 = "DK3"
                     lib.HalloFromLib "${foo3}"
+                    
                     def foo3 = 'DK4'
-                    lib.HalloFromLib '${foo3}'
+                    bat "echo Test foo3: ${foo3}"
+                    // failed
+                    // lib.HalloFromLib '${foo3}'
                 }
                 script {
                     lib.call 'DKcall'
