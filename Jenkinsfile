@@ -24,7 +24,7 @@ pipeline {
                 //     Lib.HalloFromLib "${foo2}"
                 // }
                 script {
-                    Lib.call 'DK'
+                    lib.call 'DK'
                 }
            }
        }
