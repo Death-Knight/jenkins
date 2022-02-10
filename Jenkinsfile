@@ -21,7 +21,7 @@ pipeline {
                     Lib.SimpleHelloFromLib
                 }
                 script {
-                    Lib.HalloFromLib(${foo2})
+                    Lib.HalloFromLib "${foo2}"
                 }
            }
        }
