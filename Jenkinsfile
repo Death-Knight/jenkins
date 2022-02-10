@@ -16,7 +16,8 @@ pipeline {
                     bat "echo Hallo from git, ${TEST_VAR}-${foo}!"
                 }
                 script {                    
-                    // bat "echo Hallo 2.0, ${TEST_VAR}-${foo}-${foo2}!" // fail
+                    // failed
+                    // bat "echo Hallo 2.0, ${TEST_VAR}-${foo}-${foo2}!"
 
                     def foo2 = "foo2"
                     bat "echo Hallo from git 2.0, ${TEST_VAR}-${foo2}!"
