@@ -7,7 +7,7 @@ pipeline {
    environment {
        TEST_VAR = "super"
    }
-   
+
    stages {
        stage("first") {
            steps {
@@ -22,7 +22,7 @@ pipeline {
                 }
                 script {
                     // failed
-                    lib.SimpleHelloFromLib
+                    // lib.SimpleHelloFromLib
 
                     // failed
                     // lib.SimpleHelloFromLib ''
