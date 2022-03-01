@@ -5,8 +5,8 @@ pipeline {
    agent any
 
    environment {
-       TEST_VAR = "super" // you can change it
-       env.TEST_VAR_UNCHANGEABLE = "You cant change this var!"
+       TEST_VAR = "super" // you can't change it
+       TEST_VAR_UNCHANGEABLE = "You can't change this var!"
    }
 
    stages {
