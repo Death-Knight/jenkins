@@ -6,7 +6,7 @@ pipeline {
 
    environment {
        TEST_VAR = "super" // you can change it
-       env.TEST_VAR_UNCHANGEABLE = "You can't change this var!"
+       env.TEST_VAR_UNCHANGEABLE = "You cant change this var!"
    }
 
    stages {
