@@ -25,10 +25,10 @@ pipeline {
                     // bat "echo Hallo 2.0, ${TEST_VAR}-${foo}-${foo2}!"
 
                     def foo2 = "foo2"
-                    bat "echo Hallo from git 2.0, and TEST_VAR: ${TEST_VAR}-${foo2}!"
-                    bat "echo Hallo from git 2.0, and TEST_VAR: ${env.TEST_VAR}-${foo2}!"
-                    bat "echo Hallo from git 2.0, and TEST_VAR_UNCHANGEABLE: ${TEST_VAR_UNCHANGEABLE}-${foo2}!"
-                    bat "echo Hallo from git 2.0, and TEST_VAR_UNCHANGEABLE: ${env.TEST_VAR_UNCHANGEABLE}-${foo2}!"
+                    bat "echo Hallo from git 2.0, and TEST_VAR: ${TEST_VAR}-${foo2}!" // Hallo from git 2.0, and TEST_VAR: CHANGED!-foo2!
+                    bat "echo Hallo from git 2.0, and TEST_VAR: ${env.TEST_VAR}-${foo2}!" // Hallo from git 2.0, and TEST_VAR: super-foo2!
+                    bat "echo Hallo from git 2.0, and TEST_VAR_UNCHANGEABLE: ${TEST_VAR_UNCHANGEABLE}-${foo2}!" // Hallo from git 2.0, and TEST_VAR_UNCHANGEABLE: You can't change this var!-foo2!
+                    bat "echo Hallo from git 2.0, and TEST_VAR_UNCHANGEABLE: ${env.TEST_VAR_UNCHANGEABLE}-${foo2}!" // Hallo from git 2.0, and TEST_VAR_UNCHANGEABLE: You can't change this var!-foo2!
                 }
                 // script {
                     // failed
