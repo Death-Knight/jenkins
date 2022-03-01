@@ -26,6 +26,7 @@ pipeline {
 
                     def foo2 = "foo2"
                     bat "echo Hallo from git 2.0, and TEST_VAR: ${TEST_VAR}-${foo2}!"
+                    bat "echo Hallo from git 2.0, and TEST_VAR: ${env.TEST_VAR}-${foo2}!"
                     bat "echo Hallo from git 2.0, and TEST_VAR_UNCHANGEABLE: ${TEST_VAR_UNCHANGEABLE}-${foo2}!"
                 }
                 // script {
