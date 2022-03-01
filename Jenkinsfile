@@ -14,13 +14,15 @@ pipeline {
                 script {
                     def foo = "foo" 
                     bat "echo Hallo from git, ${TEST_VAR}-${foo}!"
+
+                    env.TEST_VAR = "CHANGED!"
                 }
                 script {                    
                     // failed
                     // bat "echo Hallo 2.0, ${TEST_VAR}-${foo}-${foo2}!"
 
                     def foo2 = "foo2"
-                    bat "echo Hallo from git 2.0, ${TEST_VAR}-${foo2}!"
+                    bat "echo Hallo from git 2.0, and TEST_VAR: ${TEST_VAR}-${foo2}!"
                 }
                 // script {
                     // failed
