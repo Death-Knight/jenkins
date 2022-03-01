@@ -5,7 +5,8 @@ pipeline {
    agent any
 
    environment {
-       TEST_VAR = "super"
+       TEST_VAR = "super" // you can change it
+       env.TEST_VAR_UNCHANGEABLE = "You can't change this var!"
    }
 
    stages {
@@ -14,8 +15,10 @@ pipeline {
                 script {
                     def foo = "foo" 
                     bat "echo Hallo from git, ${TEST_VAR}-${foo}!"
+                    bat "echo Hallo from git, ${env.TEST_VAR_UNCHANGEABLE}-${foo}!"
 
-                    env.TEST_VAR = "CHANGED!"
+                    TEST_VAR = "CHANGED!"
+                    env.TEST_VAR_UNCHANGEABLE = "Trying to change..."
                 }
                 script {                    
                     // failed
@@ -23,6 +26,7 @@ pipeline {
 
                     def foo2 = "foo2"
                     bat "echo Hallo from git 2.0, and TEST_VAR: ${TEST_VAR}-${foo2}!"
+                    bat "echo Hallo from git 2.0, and TEST_VAR_UNCHANGEABLE: ${TEST_VAR_UNCHANGEABLE}-${foo2}!"
                 }
                 // script {
                     // failed
